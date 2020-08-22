@@ -1,0 +1,23 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "src",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "paths": {
+      "@core/*": ["app/@core/*"],
+      "@shared/*": ["app/@shared/*"],
+      "@lib/*": ["app/@lib/*"],
+      "@store/*": ["app/@store/*"],
+      "@app/*": ["app/*"]
+    },
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es5",
+    "module": "es2020",
+    "lib": ["es2017", "es2018", "dom"]
+  }
+}

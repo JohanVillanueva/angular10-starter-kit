@@ -1,0 +1,72 @@
+{
+  "name": "angular10-starter-kit",
+  "version": "1.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "test": "ng test --watch=false --browsers=ChromeHeadless",
+    "bundle-report": "ng build -c=prod --stats-json && npx webpack-bundle-analyzer dist/stats.json",
+    "format:fix": "pretty-quick --write --pattern \"src/**/*.{ts,html,json}\" --pattern \"e2e/**/*.{ts,html,json}\"",
+    "format:check": "prettier --list-different \"src/**/*.{ts,html,json}\" \"e2e/**/*.{ts,html,json}\"",
+    "start:local": "ng serve -c=local",
+    "start:dev": "ng serve -c=dev",
+    "start:prod": "ng serve -c=prod"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "run-s format:fix test"
+    }
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~10.0.11",
+    "@angular/common": "~10.0.11",
+    "@angular/compiler": "~10.0.11",
+    "@angular/core": "~10.0.11",
+    "@angular/forms": "~10.0.11",
+    "@angular/platform-browser": "~10.0.11",
+    "@angular/platform-browser-dynamic": "~10.0.11",
+    "@angular/router": "~10.0.11",
+    "@webcomponents/custom-elements": "^1.4.2",
+    "@webcomponents/webcomponentsjs": "^2.4.4",
+    "classlist.js": "^1.1.20150312",
+    "core-js": "^3.6.5",
+    "rxjs": "~6.5.5",
+    "tslib": "^2.0.0",
+    "web-animations-js": "^2.3.2",
+    "zone.js": "~0.10.3"
+  },
+  "devDependencies": {
+    "@angular-builders/custom-webpack": "^10.0.0",
+    "@angular-devkit/build-angular": "~0.1000.7",
+    "@angular/cli": "~10.0.7",
+    "@angular/compiler-cli": "~10.0.11",
+    "@types/jasmine": "~3.5.0",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
+    "codelyzer": "^6.0.0",
+    "husky": "^4.2.5",
+    "jasmine-core": "~3.5.0",
+    "jasmine-spec-reporter": "~5.0.0",
+    "karma": "~5.0.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage-istanbul-reporter": "~3.0.2",
+    "karma-jasmine": "~3.3.0",
+    "karma-jasmine-html-reporter": "^1.5.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-scss": "^2.1.1",
+    "prettier": "^2.1.1",
+    "pretty-quick": "^3.0.0",
+    "protractor": "~7.0.0",
+    "tailwindcss": "^1.7.3",
+    "ts-node": "~8.3.0",
+    "tslint": "~6.1.0",
+    "typescript": "~3.9.5",
+    "webpack-bundle-analyzer": "^3.8.0"
+  }
+}
